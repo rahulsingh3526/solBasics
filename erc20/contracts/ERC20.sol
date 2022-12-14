@@ -23,7 +23,7 @@ contract ERC20{
         _balances[msg.sender]= _totalSupply;
     }
 
-    function balanceOf(address _owner) public returns (uint256){
+    function balanceOf(address _owner) public view returns (uint256){
         require(_owner != address(0),"!za");
         return _balances[_owner];
     }
